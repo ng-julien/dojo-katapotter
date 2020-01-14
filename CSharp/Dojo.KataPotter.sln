@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dojo.KataPotter", "src\Dojo.KataPotter\Dojo.KataPotter.csproj", "{1E78F303-C6D1-4100-8E5D-6B2F5F08AF67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{58421565-D7EA-4C01-BDE7-6E2686C7A835}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{8CD6A1CC-EE48-463D-A5EF-143919ABC4C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dojo.KataPotter.Test", "test\Dojo.KataPotter.Test\Dojo.KataPotter.Test.csproj", "{89281E1D-84DA-49D7-A06A-14E2DD21A7BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{30AD2A88-B074-4D20-A14D-88BC68AC5119}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E78F303-C6D1-4100-8E5D-6B2F5F08AF67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E78F303-C6D1-4100-8E5D-6B2F5F08AF67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E78F303-C6D1-4100-8E5D-6B2F5F08AF67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E78F303-C6D1-4100-8E5D-6B2F5F08AF67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89281E1D-84DA-49D7-A06A-14E2DD21A7BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89281E1D-84DA-49D7-A06A-14E2DD21A7BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89281E1D-84DA-49D7-A06A-14E2DD21A7BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89281E1D-84DA-49D7-A06A-14E2DD21A7BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1E78F303-C6D1-4100-8E5D-6B2F5F08AF67} = {58421565-D7EA-4C01-BDE7-6E2686C7A835}
+		{89281E1D-84DA-49D7-A06A-14E2DD21A7BD} = {8CD6A1CC-EE48-463D-A5EF-143919ABC4C9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {182EA652-D70D-4E06-A8E8-AB2572E833F4}
+	EndGlobalSection
+EndGlobal
