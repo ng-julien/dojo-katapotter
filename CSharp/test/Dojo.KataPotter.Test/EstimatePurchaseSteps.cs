@@ -1,6 +1,7 @@
 ﻿namespace Dojo.KataPotter.Test
 {
-    using System.Collections.Generic;
+    using System.Collections.Concurrent;
+    using System.Linq;
 
     using NUnit.Framework;
 
@@ -9,19 +10,23 @@
     [Binding]
     public class EstimatePurchaseSteps
     {
-        private readonly List<int> books = new List<int>();
-        
+        private readonly ConcurrentDictionary<string, int> books = new ConcurrentDictionary<string, int>();
+
         [When("^J'achète (\\d+) copie\\(s\\) \"(.*)\"$")]
         public void WhenJEcoleDesSorciers(int nbCopyOfBook, string title)
         {
-            this.books.Add(nbCopyOfBook);
+            this.books.AddOrUpdate(
+                title,
+                nbCopyOfBook,
+                (currentTitle, currentNbCopyOfBook) => currentNbCopyOfBook += nbCopyOfBook);
         }
 
         [Then("^Je doit payé (.*)€$")]
         public void ThenJeDoitPaye(decimal expectedTotal)
         {
             var bookseller = new Bookseller();
-            var actualTotal = bookseller.GetPrice(this.books);
+            var list = this.books.Select(kv => kv.Value).ToList();
+            var actualTotal = bookseller.GetPrice(list);
             Assert.AreEqual(expectedTotal, actualTotal);
         }
     }
