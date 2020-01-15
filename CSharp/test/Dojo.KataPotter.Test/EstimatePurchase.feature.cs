@@ -75,12 +75,20 @@ namespace Dojo.KataPotter.Test
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("L\'achat d\'un livre coûte 8€")]
-        public virtual void LachatDunLivreCoute8()
+        [NUnit.Framework.DescriptionAttribute("Acheter au meilleurs prix les livres Harry Potter")]
+        [NUnit.Framework.TestCaseAttribute("1", "0", "0", "0", "0", "8", null)]
+        [NUnit.Framework.TestCaseAttribute("2", "0", "0", "0", "0", "16.00", null)]
+        [NUnit.Framework.TestCaseAttribute("1", "1", "0", "0", "0", "15.20", null)]
+        [NUnit.Framework.TestCaseAttribute("1", "1", "1", "0", "0", "21.60", null)]
+        [NUnit.Framework.TestCaseAttribute("1", "1", "1", "1", "0", "25.60", null)]
+        [NUnit.Framework.TestCaseAttribute("1", "1", "1", "1", "1", "30.00", null)]
+        [NUnit.Framework.TestCaseAttribute("2", "1", "0", "0", "0", "23.20", null)]
+        [NUnit.Framework.TestCaseAttribute("2", "2", "2", "1", "1", "51.20", null)]
+        public virtual void AcheterAuMeilleursPrixLesLivresHarryPotter(string nb_Copy_I, string nb_Copy_II, string nb_Copy_III, string nb_Copy_IV, string nb_Copy_V, string total, string[] exampleTags)
         {
-            string[] tagsOfScenario = ((string[])(null));
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("L\'achat d\'un livre coûte 8€", null, ((string[])(null)));
-#line 7
+            string[] tagsOfScenario = exampleTags;
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Acheter au meilleurs prix les livres Harry Potter", null, exampleTags);
+#line 6
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -100,257 +108,23 @@ namespace Dojo.KataPotter.Test
             else
             {
                 this.ScenarioStart();
+#line 7
+  testRunner.When(string.Format("J\'achète {0} copie(s) \"Harry Potter à l\'école des sorciers\"", nb_Copy_I), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
 #line 8
-  testRunner.When("J\'achète 1 copie(s) \"Harry Potter à l\'école des sorciers\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.When(string.Format("J\'achète {0} copie(s) \"Harry Potter et la Chambre des secrets\"", nb_Copy_II), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
-  testRunner.Then("Je doit payé 8€", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.When(string.Format("J\'achète {0} copie(s) \"Harry Potter et le Prisonnier d\'Azkaban\"", nb_Copy_III), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("L\'achat de deux même livres coûte 16€")]
-        public virtual void LachatDeDeuxMemeLivresCoute16()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("L\'achat de deux même livres coûte 16€", null, ((string[])(null)));
+#line 10
+  testRunner.When(string.Format("J\'achète {0} copie(s) \"Harry Potter et la Coupe de feu\"", nb_Copy_IV), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
 #line 11
- this.ScenarioInitialize(scenarioInfo);
+  testRunner.When(string.Format("J\'achète {0} copie(s) \"Harry Potter et l\'Ordre du Phénix\"", nb_Copy_V), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
 #line 12
-  testRunner.When("J\'achète 2 copie(s) \"Harry Potter à l\'école des sorciers\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 13
-  testRunner.Then("Je doit payé 16€", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("L\'achat de deux livres differents coûte 15.20€")]
-        public virtual void LachatDeDeuxLivresDifferentsCoute15_20()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("L\'achat de deux livres differents coûte 15.20€", null, ((string[])(null)));
-#line 15
- this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 16
-  testRunner.When("J\'achète 1 copie(s) \"Harry Potter à l\'école des sorciers\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 17
-  testRunner.When("J\'achète 1 copie(s) \"Harry Potter et la Chambre des secrets\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 18
-  testRunner.Then("Je doit payé 15.20€", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("L\'achat de trois même livres coûte 24€")]
-        public virtual void LachatDeTroisMemeLivresCoute24()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("L\'achat de trois même livres coûte 24€", null, ((string[])(null)));
-#line 20
- this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 21
-  testRunner.When("J\'achète 3 copie(s) \"Harry Potter à l\'école des sorciers\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 22
-  testRunner.Then("Je doit payé 24€", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("L\'achat de trois livres differents coûte 21.60€")]
-        public virtual void LachatDeTroisLivresDifferentsCoute21_60()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("L\'achat de trois livres differents coûte 21.60€", null, ((string[])(null)));
-#line 24
- this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 25
-  testRunner.When("J\'achète 1 copie(s) \"Harry Potter à l\'école des sorciers\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 26
-  testRunner.When("J\'achète 1 copie(s) \"Harry Potter et la Chambre des secrets\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 27
-  testRunner.When("J\'achète 1 copie(s) \"Harry Potter et le Prisonnier d\'Azkaban\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 28
-  testRunner.Then("Je doit payé 21.60€", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("L\'achat de quatre livres differents coûte 25.6€")]
-        public virtual void LachatDeQuatreLivresDifferentsCoute25_6()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("L\'achat de quatre livres differents coûte 25.6€", null, ((string[])(null)));
-#line 30
- this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 31
-  testRunner.When("J\'achète 1 copie(s) \"Harry Potter à l\'école des sorciers\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 32
-  testRunner.When("J\'achète 1 copie(s) \"Harry Potter et la Chambre des secrets\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 33
-  testRunner.When("J\'achète 1 copie(s) \"Harry Potter et le Prisonnier d\'Azkaban\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 34
-  testRunner.When("J\'achète 1 copie(s) \"Harry Potter et la Coupe de feu\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 35
-  testRunner.Then("Je doit payé 25.6€", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("L\'achat de five livres differents coûte 30€")]
-        public virtual void LachatDeFiveLivresDifferentsCoute30()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("L\'achat de five livres differents coûte 30€", null, ((string[])(null)));
-#line 37
- this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 38
-  testRunner.When("J\'achète 1 copie(s) \"Harry Potter à l\'école des sorciers\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 39
-  testRunner.When("J\'achète 1 copie(s) \"Harry Potter et la Chambre des secrets\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 40
-  testRunner.When("J\'achète 1 copie(s) \"Harry Potter et le Prisonnier d\'Azkaban\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 41
-  testRunner.When("J\'achète 1 copie(s) \"Harry Potter et la Coupe de feu\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 42
-  testRunner.When("J\'achète 1 copie(s) \"Harry Potter et l\'Ordre du Phénix\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 43
-  testRunner.Then("Je doit payé 30€", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then(string.Format("Je doit payé {0}€", total), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
