@@ -26,3 +26,10 @@ Feature: EstimatePurchase
     When J'achète 1 copie(s) "Harry Potter et la Chambre des secrets"
     When J'achète 1 copie(s) "Harry Potter et le Prisonnier d'Azkaban"
     Then Je doit payé 21.60€
+
+  Scenario: L'achat de quatre livres differents coûte 25.6€
+    When J'achète 1 copie(s) "Harry Potter à l'école des sorciers"
+    When J'achète 1 copie(s) "Harry Potter et la Chambre des secrets"
+    When J'achète 1 copie(s) "Harry Potter et le Prisonnier d'Azkaban"
+    When J'achète 1 copie(s) "Harry Potter et la Coupe de feu"
+    Then Je doit payé 25.6€
