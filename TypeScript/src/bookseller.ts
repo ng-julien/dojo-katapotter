@@ -1,7 +1,10 @@
 import * as _ from "lodash";
 
 export class Bookseller {
+  private static readonly Discounts: number[] = [1, 0.95];
   public GetPrice(books: number[]): number {
-    return _.sumBy(books, book => book * 8);
+    var applicableDiscount =
+      Bookseller.Discounts[_.filter(books, book => book > 0).length - 1];
+    return _.sumBy(books, book => book * 8) * applicableDiscount;
   }
 }
