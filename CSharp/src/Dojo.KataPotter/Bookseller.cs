@@ -7,9 +7,12 @@
     {
         private const decimal UnitPrice = 8m;
 
+        private static readonly decimal[] Discounts = { 1m, 0.95m};
+
         public decimal GetPrice(List<int> books)
         {
-            return books.Sum(book => book * UnitPrice);
+            var applicableDiscount = Discounts[books.Count(book => book > 0) - 1];
+            return books.Sum(book => book * UnitPrice) * applicableDiscount;
         }
     }
 }

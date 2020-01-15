@@ -16,3 +16,13 @@ Feature: EstimatePurchase
     When J'achète 1 copie(s) "Harry Potter à l'école des sorciers"
     When J'achète 1 copie(s) "Harry Potter et la Chambre des secrets"
     Then Je doit payé 15.20€
+
+  Scenario: L'achat de trois même livres coûte 20€
+    When J'achète 3 copie(s) "Harry Potter à l'école des sorciers"
+    Then Je doit payé 24€
+
+  Scenario: L'achat de trois livres differents coûte 21.60€
+    When J'achète 1 copie(s) "Harry Potter à l'école des sorciers"
+    When J'achète 1 copie(s) "Harry Potter et la Chambre des secrets"
+    When J'achète 1 copie(s) "Harry Potter et le Prisonnier d'Azkaban"
+    Then Je doit payé 21.60€
