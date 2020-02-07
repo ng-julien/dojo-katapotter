@@ -21,7 +21,7 @@
                 (currentTitle, currentNbCopyOfBook) => currentNbCopyOfBook += nbCopyOfBook);
         }
 
-        [Then("^Je doit payé (.*)€$")]
+        [Then("^Je dois payer (.*)€$")]
         public void ThenJeDoitPaye(decimal expectedTotal)
         {
             var bookseller = new Bookseller();
