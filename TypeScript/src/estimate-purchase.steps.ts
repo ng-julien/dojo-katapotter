@@ -10,8 +10,8 @@ export class EstimatePurchaseSteps {
     this.books.push(nbCopyOfBook);
   }
 
-  @then(/^Je doit payé (.*)€$/)
-  public thenJeDoitPaye(expectedTotal: number): void {
+  @then(/^Je dois payer (.*)€$/)
+  public thenJeDoisPayer(expectedTotal: number): void {
     var bookseller = new Bookseller();
     let actualTotal = bookseller.GetPrice(this.books);
     assert.equal(expectedTotal, actualTotal);
