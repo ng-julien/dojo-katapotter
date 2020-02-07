@@ -11,8 +11,8 @@
             ScenarioContext.Current.Pending();
         }
 
-        [Then("^Je doit payé (.*)€$")]
-        public void ThenJeDoitPaye(decimal expectedTotal)
+        [Then("^Je dois payer (.*)€$")]
+        public void ThenJeDoisPayer(decimal expectedTotal)
         {
             ScenarioContext.Current.Pending();
         }

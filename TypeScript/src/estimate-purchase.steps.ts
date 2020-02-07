@@ -8,8 +8,8 @@ export class EstimatePurchaseSteps {
     throw new Error("Not implemented");
   }
 
-  @then(/^Je doit payé (.*)€$/)
-  public thenJeDoitPaye(expectedTotal: string): void {
+  @then(/^Je dois payer (.*)€$/)
+  public thenJeDoisPayer(expectedTotal: string): void {
     throw new Error("Not implemented");
   }
 }

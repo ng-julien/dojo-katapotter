@@ -6,4 +6,4 @@ Feature: EstimatePurchase
 
 	Scenario: L'achat d'un livre coûte 8€
 		When J'achète 1 copie(s) "Harry Potter à l'école des sorciers"
-		Then Je doit payé 8€
+		Then Je dois payer 8€

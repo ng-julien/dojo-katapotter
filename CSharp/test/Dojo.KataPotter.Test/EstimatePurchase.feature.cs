@@ -104,7 +104,7 @@ namespace Dojo.KataPotter.Test
   testRunner.When("J\'achète 1 copie(s) \"Harry Potter à l\'école des sorciers\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
-  testRunner.Then("Je doit payé 8€", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("Je dois payer 8€", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
