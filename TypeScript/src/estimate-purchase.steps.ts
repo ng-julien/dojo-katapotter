@@ -8,7 +8,10 @@ export class EstimatePurchaseSteps {
   private readonly books: { [key: string]: number } = {};
 
   @when(/^J\'achète (\d*) copie\(s\) \"([^\"]*)\"$/)
-  public whenJEcoleDesSorciers(nbCopyOfBook: number, title: string): void {
+  public whenJAcheteEcoleDesSorciers(
+    nbCopyOfBook: number,
+    title: string
+  ): void {
     var currentValue = this.books[title];
     this.books[title] = _.isUndefined(currentValue)
       ? nbCopyOfBook
