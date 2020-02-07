@@ -22,7 +22,7 @@
         }
 
         [Then("^Je dois payer (.*)€$")]
-        public void ThenJeDoitPaye(decimal expectedTotal)
+        public void ThenJeDoisPayer(decimal expectedTotal)
         {
             var bookseller = new Bookseller();
             var list = this.books.Select(kv => kv.Value).ToList();

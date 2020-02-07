@@ -16,7 +16,7 @@ export class EstimatePurchaseSteps {
   }
 
   @then(/^Je dois payer (.*)€$/)
-  public thenJeDoitPaye(expectedTotal: number): void {
+  public thenJeDoisPayer(expectedTotal: number): void {
     let bookseller = new Bookseller();
     let actualTotal = bookseller.GetPrice(
       _.flatMap(this.books, value => value)

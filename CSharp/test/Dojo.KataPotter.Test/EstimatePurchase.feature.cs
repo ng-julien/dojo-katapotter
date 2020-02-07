@@ -124,7 +124,7 @@ namespace Dojo.KataPotter.Test
   testRunner.When(string.Format("J\'achète {0} copie(s) \"Harry Potter et l\'Ordre du Phénix\"", nb_Copy_V), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 12
-  testRunner.Then(string.Format("Je doit payé {0}€", total), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then(string.Format("Je dois payer {0}€", total), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
